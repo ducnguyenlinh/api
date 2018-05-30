@@ -1,0 +1,2 @@
+module Api::AlphabetsHelper
+end

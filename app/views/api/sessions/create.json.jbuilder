@@ -1,4 +1,5 @@
+json.error @error
 json.message @message
-if @message == true
-    json.data @user
+if @error == false
+    json.user @user
 end

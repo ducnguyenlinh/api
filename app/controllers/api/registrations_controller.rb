@@ -5,10 +5,12 @@ class Api::RegistrationsController < ApplicationController
     def create
         @user = User.new user_params
         if @user.save
-            @message = true
+            @error = false
+            @message = "Registered successfully"
             sign_in @user
         else
-            @message = false
+            @error = true
+            @message = "This email already exist, please login"
         end
     end
     

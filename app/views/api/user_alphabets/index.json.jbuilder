@@ -1,0 +1,1 @@
+json.user_alphabets @user_alphabets
