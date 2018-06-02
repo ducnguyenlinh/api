@@ -1,0 +1,13 @@
+<h2><%= @lesson.content%></h2>
+<hr>
+<a href="<%= new_lesson_vocabulary_path%>" class="btn btn-primary">Add Vocabulary</a>
+<%= link_to("Delete Lesson", lesson_path(@lesson) , method: :delete) %>
+<hr>
+<h3>Vocabulary</h3>
+<div class="list-group">
+    <% @lesson.vocabularies.each do |item| %>
+        <a href="<%= lesson_vocabulary_sentences_path(lesson_id: params[:lesson_id], vocabulary_id: item.id) %>" class="list-group-item">
+            <%= item.japanese %>
+        </a>
+    <% end %>
+</div>

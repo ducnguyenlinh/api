@@ -1,0 +1,8 @@
+<h2><%= @alphabet.japanese%></h2>
+<hr>
+<a href="<%= new_alphabet_alphabet_image_path(@alphabet.id)%>" class="btn btn-primary">Add Alphabet Image</a>
+<%= link_to("Delete Alphabet", alphabet_path(@alphabet) , method: :delete) %>
+<hr>
+<h3>Alphabet</h3>
+<img src="<%= @alphabet.image_writing %>" class="img-responsive">
+<img src="<%= @alphabet.image_compare %>" class="img-responsive">

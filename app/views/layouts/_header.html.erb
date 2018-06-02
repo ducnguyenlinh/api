@@ -1,0 +1,27 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Nihongo taisaku</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a href="<%= alphabets_path %>"> Alphabets </a></li>
+      <li><a href="<%= lessons_path %>">Lessons </a></li>
+      <li><a href="<%= feedbacks_path %>"> Feedbacks </a></li>
+    </ul>
+    
+    <ul class="nav navbar-nav navbar-right">
+      <% if user_signed_in? %>
+        <li>
+          <%= link_to destroy_user_session_path, method: :delete do %>
+            <span class="glyphicon glyphicon-log-out"></span>
+            <%= "Logout" %>
+          <% end %>
+        </li>
+      <% else %>
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>

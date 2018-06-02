@@ -13,18 +13,18 @@ class Api::AlphabetImagesController < ApplicationController
     end
     
     def create
-        @alphabet_image = AlphabetImage.new alphabet_id: params[:alphabet_id],
-                                            sound: params[:sound],
-                                            image_association: params[:image_association],
-                                            description: params[:description],
-                                            picture_1: params[:picture_1], picture_2: params[:picture_2],
-                                            picture_3: params[:picture_3]
-        authorize @alphabet_image
+        @alphabet_image = AlphabetImage.new new_params
         
-        respond_to do |format|
-            if @alphabet_image.save
-                format.json { render json: @alphabet_image}
-            end
+        authorize @alphabet_image
+     
+        if @alphabet_image.save
+            render json: @alphabet_image
         end
+    end
+    
+    private
+    def new_params
+        params.require(:alphabet_image).permit :alphabet_id, :image_association,
+                                                :description, :picture_1, :picture_2, :picture_3
     end
 end

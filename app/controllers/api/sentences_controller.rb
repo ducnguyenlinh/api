@@ -8,16 +8,18 @@ class Api::SentencesController < ApplicationController
     end
     
     def create
-        @sentence = Sentence.new vocabulary_id: params[:vocabulary_id], 
-                                content: params[:content], spell: params[:spell],
-                                mean: params[:mean]
-        authorize @sentence
+        @sentence = Sentence.new new_params
         
-        respond_to do |format|
-            if @sentence.save
-                format.json {render json: @sentence}
-            end
+        authorize @sentence
+   
+        if @sentence.save
+            render json: @sentence
         end
+       
     end
 
+    private
+    def new_params
+        params.require(:sentence).permit :vocabulary_id, :content, :spell, :mean
+    end
 end

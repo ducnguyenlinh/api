@@ -13,15 +13,17 @@ class Api::AlphabetWritingsController < ApplicationController
     end
     
     def create
-        @alphabet_writing = AlphabetWriting.new alphabet_id: params[:alphabet_id],
-                                            image_writing: params[:image_writing],
-                                            image_compare: params[:image_compare]
-        authorize @alphabet_writing
+        @alphabet_writing = AlphabetWriting.new new_params
         
-        respond_to do |format|
-            if @alphabet_writing.save
-                format.json { render json: @alphabet_writing}
-            end
+        authorize @alphabet_writing
+    
+        if @alphabet_writing.save
+            render json: @alphabet_writing
         end
+    end
+    
+    private
+    def new_params
+        params.require(:alphabet_writing).permit :alphabet_id, :image_writing, :image_compare
     end
 end

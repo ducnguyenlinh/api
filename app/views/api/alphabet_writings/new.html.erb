@@ -1,0 +1,23 @@
+<h2 class="text-center"> Alphabet Writing </h2>
+<hr>
+<%= form_for :alphabet_writing, url: api_alphabet_writings_path do |f|%>
+    <div class="field">
+        <%= f.label :alphabet_id %>
+        <%= f.text_field :alphabet_id, class: "form-control" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :image_writing %>
+        <%= f.text_field :image_writing, class: "form-control" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :image_compare %>
+        <%= f.text_field :image_compare, class: "form-control"%>
+    </div>
+    
+    <hr/>
+    <div class="actions">
+        <%= f.submit "Add", class: "btn btn-primary btn-block"%>
+    </div>
+<% end %>

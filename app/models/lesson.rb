@@ -3,6 +3,7 @@ class Lesson < ActiveRecord::Base
     has_many :users, through: :user_lessons
     has_many :vocabularies
     
+
     if Lesson.first.nil?
         Lesson.create ({"content" => "Bài 1: はじめまして", "classify" => 0})
         Lesson.create ({"content" => "Bài 2: ほんの気持ちです", "classify" => 0})

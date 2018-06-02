@@ -13,17 +13,24 @@ class Api::VocabulariesController < ApplicationController
     end
     
     def create
-        @vocabulary = Vocabulary.new lesson_id: params[:lesson_id],
-                                    japanese: params[:japanese], 
-                                    spell: params[:spell], 
-                                    mean: params[:mean], 
-                                    picture: params[:picture]
+        @vocabulary = Vocabulary.new new_params
+        
         authorize @vocabulary
         
-        respond_to do |format|
-            if @vocabulary.save
-                format.json {render json: @vocabulary}
-            end
-        end                              
+        if @vocabulary.save
+            render json: @vocabulary
+        end
+                               
+    end
+    
+    def destroy
+        @vocabulary1 = Vocabulary.find_by id: params[:id]
+        @vocabulary1.destroy
+    end
+    
+    private
+    def new_params
+        params.require(:vocabulary).permit :lesson_id, :japanese, :spell, :mean,
+                                            :picture
     end
 end

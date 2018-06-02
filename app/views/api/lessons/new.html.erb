@@ -1,0 +1,16 @@
+<h2> Lesson </h2>
+<%= form_for :lesson, url: api_lessons_path do |f|%>
+    <div class="field">
+        <%= f.label :content %>
+        <%= f.text_field :content, class: "form-control" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :classify %>
+        <%= f.text_field :classify, class: "form-control" %>
+    </div>
+    <br>
+    <div class="actions">
+        <%= f.submit "Add", class: "btn btn-primary btn-block"  %>
+    </div>
+<% end %>

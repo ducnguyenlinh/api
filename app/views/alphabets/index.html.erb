@@ -1,0 +1,12 @@
+<h1>List alphabets</h1>
+<%= link_to "Add Alphabet", new_alphabet_path, class: "btn btn-primary"%>
+<hr>
+<div class="list-group">
+  <% @alphabets.each do |item| %>
+      <a href="<%= alphabet_alphabet_images_path(item) %>" class="list-group-item">
+        <%= item.japanese %> 
+        <%= item.spell %>
+      </a>
+  <% end %>
+</div>
+<%= will_paginate @alphabets %>

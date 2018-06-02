@@ -3,7 +3,6 @@ class CreateAlphabetImages < ActiveRecord::Migration
     create_table :alphabet_images do |t|
 
       t.integer :alphabet_id
-      t.string :sound
       t.string :image_association
       t.string :description
       t.string :picture_1

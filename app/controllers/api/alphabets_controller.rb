@@ -8,13 +8,23 @@ class Api::AlphabetsController < ApplicationController
     end
     
     def create
-        @alphabet = Alphabet.new japanese: params[:japanese], spell: params[:spell], classify: params[:classify]
+        @alphabet = Alphabet.new new_params
+    
         authorize @alphabet
         
-        respond_to do |format|
-            if @alphabet.save
-                format.json { render json: @alphabet}
-            end
+        if @alphabet.save
+            render json: @alphabet
         end
+    end
+    
+    def destroy
+        @alphabet1 = Alphabet.find_by id: params[:id]
+        @alphabet1.destroy
+    end
+    
+    private
+    def new_params
+        params.require(:alphabet).permit :japanese, :spell, :classify, :sound,
+                                            :image_writing, :image_compare
     end
 end

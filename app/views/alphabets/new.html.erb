@@ -1,0 +1,38 @@
+<h2> New Alphabet </h2>
+<%= form_for :alphabet, url: alphabets_path do |f|%>
+    <div class="field">
+        <%= f.label :japanese %>
+        <%= f.text_field :japanese, class: "form-control" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :spell %>
+        <%= f.text_field :spell, class: "form-control" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :classify %>
+        <%= f.text_field :classify, class: "form-control" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :sound %>
+        <%= f.text_field :sound, class: "form-control" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :image_writing %>
+        <%= f.text_field :image_writing, class: "form-control" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :image_compare %>
+        <%= f.text_field :image_compare, class: "form-control" %>
+    </div>
+    <hr>
+    
+    <div class="actions">
+        <%= f.submit "Add", class: "btn btn-primary btn-block" %>
+    </div>
+<% end %>
+

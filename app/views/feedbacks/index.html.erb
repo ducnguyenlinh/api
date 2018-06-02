@@ -1,0 +1,7 @@
+<h1> List Feedback </h1>
+<hr>
+<div class="list-group">
+  <% @feedbacks.each do |item| %>
+    <a href="<%= feedback_path(item) %>" class="list-group-item"><%= item.object_class %></a>
+  <% end %>
+</div>

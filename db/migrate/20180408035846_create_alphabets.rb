@@ -5,6 +5,9 @@ class CreateAlphabets < ActiveRecord::Migration
       t.string :japanese
       t.string :spell
       t.integer :classify
+      t.string :sound
+      t.string :image_writing
+      t.string :image_compare
 
       t.timestamps null: false
     end

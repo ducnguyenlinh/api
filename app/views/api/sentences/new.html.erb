@@ -1,0 +1,28 @@
+<h2> Sentence </h2>
+<%= form_for :sentence, url: api_sentences_path do |f|%>
+    <div class="field">
+        <%= f.label :vocabulary_id %>
+        <%= f.text_field :vocabulary_id, class: "form-control" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :content %>
+        <%= f.text_field :content, class: "form-control" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :spell %>
+        <%= f.text_field :spell, class: "form-control"%>
+    </div>
+    
+    
+    <div class="field">
+        <%= f.label :mean %>
+        <%= f.text_field :mean, class: "form-control" %>
+    </div>
+    
+    <br>
+    <div class="actions">
+        <%= f.submit "Add", class: "btn btn-primary btn-block" %>
+    </div>
+<% end %>

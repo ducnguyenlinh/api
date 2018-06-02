@@ -19,7 +19,12 @@ class Api::FeedbacksController < ApplicationController
     
     def update
         feedback_update = Feedback.find_by id: params[:id]
-        feedback_update.update
+        feedback_update.update approve: 1
         render json: feedback_update
+    end
+    
+    def destroy
+        @feedback_destroy = Feedback.find_by id: params[:id]
+        @feedback_destroy.destroy
     end
 end

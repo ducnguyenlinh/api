@@ -1,0 +1,35 @@
+<h2> New Alphabet Image </h2>
+<%= form_for :alphabet_image, url: alphabet_alphabet_images_path do |f|%>
+    
+    <div class="field">
+        <%= f.label :image_association %>
+        <%= f.text_field :image_association, class: "form-control" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :description %>
+        <%= f.text_field :description, class: "form-control" %>
+    </div>
+    
+    
+    <div class="field">
+        <%= f.label :picture_1 %>
+        <%= f.text_field :picture_1, class: "form-control" %>
+    </div>
+    
+    
+    <div class="field">
+        <%= f.label :picture_2 %>
+        <%= f.text_field :picture_2, class: "form-control" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :picture_3 %>
+        <%= f.text_field :picture_3, class: "form-control" %>
+    </div>
+    <br>
+    
+    <div class="actions">
+        <%= f.submit "Add", class: "btn btn-primary btn-block" %>
+    </div>
+<% end %>

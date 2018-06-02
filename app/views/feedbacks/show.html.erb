@@ -1,0 +1,3 @@
+<h3> <%= @feedback.content %> </h3>
+<%= link_to("OK", api_feedback_path(@feedback) , method: :put) %>
+<%= link_to("Cancel", api_feedback_path(@feedback) , method: :delete) %>

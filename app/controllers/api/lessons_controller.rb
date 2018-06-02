@@ -8,13 +8,22 @@ class Api::LessonsController < ApplicationController
     end
     
     def create
-        @lesson = Lesson.new content: params[:content], classify: params[:classify]
+        @lesson = Lesson.new new_params
+    
         authorize @lesson
         
-        respond_to do |format|
-            if @lesson.save
-                format.json {render json: @lesson}
-            end
+        if @lesson.save
+            render json: @lesson
         end
+    end
+    
+    def destroy
+        @lesson1 = Lesson.find_by id: params[:id]
+        @lesson1.destroy
+    end
+    
+    private
+    def new_params
+        params.require(:lesson).permit :content, :classify
     end
 end

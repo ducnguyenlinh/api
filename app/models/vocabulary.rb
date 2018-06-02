@@ -1,6 +1,6 @@
 class Vocabulary < ActiveRecord::Base
     belongs_to :lesson
-    has_many :sentence
+    has_many :sentences
 
     if Vocabulary.first.nil?
         Vocabulary.create ({"lesson_id" => 1, "japanese" => "わたし", "spell" => "watashi",

@@ -1,0 +1,9 @@
+<h1> List Lessons </h1>
+<%= link_to "Add Lesson", new_lesson_path, class: "btn btn-primary"%>
+<hr>
+<div class="list-group">
+  <% @lessons.each do |item| %>
+    <a href="<%= lesson_vocabularies_path(item) %>" class="list-group-item"><%= item.content %></a>
+  <% end %>
+</div>
+<%= will_paginate @lessons %>

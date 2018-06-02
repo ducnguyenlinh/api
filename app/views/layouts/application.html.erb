@@ -3,12 +3,19 @@
   <head>
     <title>日本語対策　</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-    
   </head>
   <body>
-    <%= yield %>
-  
+    <%= render "layouts/header" %>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

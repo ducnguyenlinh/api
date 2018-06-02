@@ -8,6 +8,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'kaminari'
 gem "pundit"
 gem "nokogiri"
+gem "bootstrap-sass", "3.3.7"
+gem 'jquery-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
