@@ -14,17 +14,20 @@ class Api::FeedbacksController < ApplicationController
         feedback = Feedback.create user_id: current_user.id, object_class: params[:object_class], 
                                  object_id: params[:object_id], content: params[:content], 
                                  approve: 0
-        render json: feedback
+        #render json: feedback
+        redirect_to feedbacks_path
     end
     
     def update
         feedback_update = Feedback.find_by id: params[:id]
         feedback_update.update approve: 1
-        render json: feedback_update
+        #render json: feedback_update
+        redirect_to feedbacks_path
     end
     
     def destroy
         @feedback_destroy = Feedback.find_by id: params[:id]
         @feedback_destroy.destroy
+        redirect_to feedbacks_path
     end
 end

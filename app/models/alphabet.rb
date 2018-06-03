@@ -1,6 +1,6 @@
 class Alphabet < ActiveRecord::Base
     has_many :users, through: :user_alphabets
-    has_one :alphabet_image
+    has_many :alphabet_images
     has_one :alphabet_writing
     
     if Alphabet.first.nil?
@@ -207,7 +207,7 @@ class Alphabet < ActiveRecord::Base
         Alphabet.create ({"japanese" => "イ", "spell" => "i", "classify" => 1,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/ii.mp3",
             "image_writing" => "https://imgur.com/91UwzdM.png", 
-            "image_compare" => "https://imgur.com/UTmuHId.png"})
+            "image_compare" => "https://imgur.com/SVHGZDp.png"})
         Alphabet.create ({"japanese" => "ウ", "spell" => "u", "classify" => 1,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/uu.mp3",
             "image_writing" => "https://imgur.com/NTCRmUz.png", 
@@ -228,7 +228,7 @@ class Alphabet < ActiveRecord::Base
         Alphabet.create ({"japanese" => "キ", "spell" => "ki", "classify" => 1,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/ki.mp3",
             "image_writing" => "https://imgur.com/og6QdlB.png", 
-            "image_compare" => "https://imgur.com/2k8yksq.png"})
+            "image_compare" => "https://imgur.com/ivyLsMC.png"})
         Alphabet.create ({"japanese" => "ク", "spell" => "ku", "classify" => 1,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/ku.mp3",
             "image_writing" => "https://imgur.com/IECNR28.png", 
@@ -270,7 +270,7 @@ class Alphabet < ActiveRecord::Base
         Alphabet.create ({"japanese" => "チ", "spell" => "chi", "classify" => 1,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/ti.mp3",
             "image_writing" => "https://imgur.com/VZtMMe4.png", 
-            "image_compare" => "https://imgur.com/rjEAmxT.png"})
+            "image_compare" => "https://imgur.com/f7OgZ9g.png"})
         Alphabet.create ({"japanese" => "ツ", "spell" => "tsu", "classify" => 1,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/tu.mp3",
             "image_writing" => "https://imgur.com/80W2cWv.png", 
@@ -316,7 +316,7 @@ class Alphabet < ActiveRecord::Base
         Alphabet.create ({"japanese" => "フ", "spell" => "fu", "classify" => 1,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/hu.mp3",
             "image_writing" => "https://imgur.com/H60zkmm.png", 
-            "image_compare" => "https://imgur.com/5xcEImX.png"})
+            "image_compare" => "https://imgur.com/Q2Klekn.png"})
         Alphabet.create ({"japanese" => "ヘ", "spell" => "he", "classify" => 1,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/he.mp3",
             "image_writing" => "https://imgur.com/epejaeD.png", 
@@ -341,7 +341,7 @@ class Alphabet < ActiveRecord::Base
         Alphabet.create ({"japanese" => "メ", "spell" => "me", "classify" => 1,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/me.mp3",
             "image_writing" => "https://imgur.com/SID1dTC.png", 
-            "image_compare" => "https://imgur.com/9IwGAzg.png"})
+            "image_compare" => "https://imgur.com/m9KqS6X.png"})
         Alphabet.create ({"japanese" => "モ", "spell" => "mo", "classify" => 1,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/mo.mp3",
             "image_writing" => "https://imgur.com/8LWdANV.png", 
@@ -350,7 +350,7 @@ class Alphabet < ActiveRecord::Base
         Alphabet.create ({"japanese" => "ヤ", "spell" => "ya", "classify" => 1,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/ya.mp3",
             "image_writing" => "https://imgur.com/ntXmemj.png", 
-            "image_compare" => "https://imgur.com/BWMlUBZ.png"})
+            "image_compare" => "https://imgur.com/vJYnsFc.png"})
         Alphabet.create ({"japanese" => "ユ", "spell" => "yu", "classify" => 1,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/yu.mp3",
             "image_writing" => "https://imgur.com/QOmjdHX.png", 
@@ -367,7 +367,7 @@ class Alphabet < ActiveRecord::Base
         Alphabet.create ({"japanese" => "リ", "spell" => "ri", "classify" => 1,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/ri.mp3",
             "image_writing" => "https://imgur.com/ZGrEQCp.png", 
-            "image_compare" => "https://imgur.com/vejaVbd.png"})
+            "image_compare" => "https://imgur.com/hzq8vQC.png"})
         Alphabet.create ({"japanese" => "ル", "spell" => "ru", "classify" => 1,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/ru.mp3",
             "image_writing" => "https://imgur.com/i5WVhyD.png", 
@@ -693,7 +693,7 @@ class Alphabet < ActiveRecord::Base
         Alphabet.create ({"japanese" => "ヂ", "spell" => "ji", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/ji.mp3",
             "image_writing" => "https://imgur.com/kGpt61e.png", 
-            "image_compare" => "https://imgur.com/3kr8Nxp.png"})
+            "image_compare" => "https://imgur.com/zGU2uIj.png"})
         Alphabet.create ({"japanese" => "ヅ", "spell" => "zu", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/zu.mp3",
             "image_writing" => "https://imgur.com/OOIftlF.png", 

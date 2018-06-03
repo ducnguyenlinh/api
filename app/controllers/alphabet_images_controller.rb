@@ -5,9 +5,14 @@ class AlphabetImagesController < ApplicationController
     end
     
     def create
-        @alphabet_image = AlphabetImage.new new_params
+        @alphabet_image = @alphabet.alphabet_images.new new_params
         
-        redirect_to alphabet_alphabet_images_path
+        authorize @alphabet_image
+        
+        if @alphabet_image.save
+            redirect_to alphabet_alphabet_images_path
+        end
+        
     end
     
     private

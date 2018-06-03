@@ -2,6 +2,9 @@
 <hr>
 <div class="list-group">
   <% @feedbacks.each do |item| %>
-    <a href="<%= feedback_path(item) %>" class="list-group-item"><%= item.object_class %></a>
+    <a href="<%= feedback_path(item) %>" class="list-group-item">
+      <%= item.object_class %>
+      <%= item.object_id %>
+    </a>
   <% end %>
 </div>
