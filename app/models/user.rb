@@ -13,5 +13,6 @@ class User < ActiveRecord::Base
   has_many :lessons, through: :user_lessons
   has_many :user_alphabets
   has_many :alphabets, through: :user_alphabets
+  has_many :feedbacks
   
 end

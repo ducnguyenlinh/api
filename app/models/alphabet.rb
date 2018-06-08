@@ -1,7 +1,6 @@
 class Alphabet < ActiveRecord::Base
     has_many :users, through: :user_alphabets
     has_many :alphabet_images
-    has_one :alphabet_writing
     
     if Alphabet.first.nil?
         
@@ -502,145 +501,145 @@ class Alphabet < ActiveRecord::Base
         
         Alphabet.create ({"japanese" => "きゃ", "spell" => "kya", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/kya.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/naK66CT.png", 
             "image_compare" => ""})
         Alphabet.create ({"japanese" => "きゅ", "spell" => "kyu", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/kyu.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/2LD9se4.png", 
             "image_compare" => ""})
         Alphabet.create ({"japanese" => "きょ", "spell" => "kyo", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/kyo.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/2VGyMLE.png", 
             "image_compare" => ""})
         
         Alphabet.create ({"japanese" => "しゃ", "spell" => "sha", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/sha.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/532liD8.png", 
             "image_compare" => ""})
         Alphabet.create ({"japanese" => "しゅ", "spell" => "shu", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/shu.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/tBvGy5i.png", 
             "image_compare" => ""})
         Alphabet.create ({"japanese" => "しょ", "spell" => "sho", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/sho.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/8TTz84r.png", 
             "image_compare" => ""})
         
         Alphabet.create ({"japanese" => "ちゃ", "spell" => "cha", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/cha.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/tAlaWTy.png", 
             "image_compare" => ""})
         Alphabet.create ({"japanese" => "ちゅ", "spell" => "chu", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/chu.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/bfYjFJf.png", 
             "image_compare" => ""})
         Alphabet.create ({"japanese" => "ちょ", "spell" => "cho", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/cho.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/s5rZUVF.png", 
             "image_compare" => ""})
         
         Alphabet.create ({"japanese" => "にゃ", "spell" => "nya", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/nya.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/nfRGnso.png", 
             "image_compare" => ""})
         Alphabet.create ({"japanese" => "にゅ", "spell" => "nyu", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/nyu.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/cj4rzji.png", 
             "image_compare" => ""})
         Alphabet.create ({"japanese" => "にょ", "spell" => "nyo", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/nyo.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/3pPuOXs.png", 
             "image_compare" => ""})
         
         Alphabet.create ({"japanese" => "ひゃ", "spell" => "hya", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/hya.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/eXFYWKt.png", 
             "image_compare" => ""})
         Alphabet.create ({"japanese" => "ひゅ", "spell" => "hyu", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/hyu.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/uj93oq2.png", 
             "image_compare" => ""})
         Alphabet.create ({"japanese" => "ひょ", "spell" => "hyo", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/hyo.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/aOm81G6.png", 
             "image_compare" => ""})
         
         Alphabet.create ({"japanese" => "みゃ", "spell" => "mya", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/mya.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/21TUesQ.png", 
             "image_compare" => ""})
         Alphabet.create ({"japanese" => "みゅ", "spell" => "myu", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/myu.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/16NasbI.png", 
             "image_compare" => ""})
         Alphabet.create ({"japanese" => "みょ", "spell" => "myo", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/myo.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/rcPx6aN.png", 
             "image_compare" => ""})
         
         Alphabet.create ({"japanese" => "りゃ", "spell" => "rya", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/rya.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/IkviBNZ.png", 
             "image_compare" => ""})
         Alphabet.create ({"japanese" => "りゅ", "spell" => "ryu", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/ryu.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/VERiGCf.png", 
             "image_compare" => ""})
         Alphabet.create ({"japanese" => "りょ", "spell" => "ryo", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/ryo.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/8UcgMwl.png", 
             "image_compare" => ""})
         
         Alphabet.create ({"japanese" => "ぎゃ", "spell" => "gya", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/gya.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/Ht2jhN5.png", 
             "image_compare" => ""})
         Alphabet.create ({"japanese" => "ぎゅ", "spell" => "gyu", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/gyu.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/RqUdxqj.png", 
             "image_compare" => ""})
         Alphabet.create ({"japanese" => "ぎょ", "spell" => "gyo", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/gyo.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/FiwaYJp.png", 
             "image_compare" => ""})
         
         Alphabet.create ({"japanese" => "じゃ", "spell" => "ja", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/ja.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/OrZZuvN.png", 
             "image_compare" => ""})
         Alphabet.create ({"japanese" => "じゅ", "spell" => "ju", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/ju.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/MM3Pv6D.png", 
             "image_compare" => ""}) 
         Alphabet.create ({"japanese" => "じょ", "spell" => "jo", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/jo.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/jiMa5y4.png", 
             "image_compare" => ""})
          
         Alphabet.create ({"japanese" => "びゃ", "spell" => "bya", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/bya.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/zQXPcKH.png", 
             "image_compare" => ""})
         Alphabet.create ({"japanese" => "びゅ", "spell" => "byu", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/byu.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/ORAF5eE.png", 
             "image_compare" => ""})
         Alphabet.create ({"japanese" => "びょ", "spell" => "byo", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/byo.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/RTgMiy3.png", 
             "image_compare" => ""})
         
         Alphabet.create ({"japanese" => "ぴゃ", "spell" => "pya", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/pya.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/jo3SdBs.png", 
             "image_compare" => ""})
         Alphabet.create ({"japanese" => "ぴゅ", "spell" => "pyu", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/pyu.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/bPW3lhu.png", 
             "image_compare" => ""})
         Alphabet.create ({"japanese" => "ぴょ", "spell" => "pyo", "classify" => 2,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/pyo.mp3",
-            "image_writing" => ".png", 
+            "image_writing" => "https://imgur.com/Q8R8Ii1.png", 
             "image_compare" => ""})
         
         #---------------------------------------------------------------------------
@@ -751,145 +750,145 @@ class Alphabet < ActiveRecord::Base
         
         Alphabet.create ({"japanese" => "キャ", "spell" => "kya", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/kya.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/70mHfam.png", 
+            "image_compare" => ""})
         Alphabet.create ({"japanese" => "キュ", "spell" => "kyu", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/kyu.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/lIkNTvc.png", 
+            "image_compare" => ""})
         Alphabet.create ({"japanese" => "キョ", "spell" => "kyo", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/kyo.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/MEvnOrg.png", 
+            "image_compare" => ""})
         
         Alphabet.create ({"japanese" => "シャ", "spell" => "sha", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/sha.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/EQrhgUR.png", 
+            "image_compare" => ""})
         Alphabet.create ({"japanese" => "シュ", "spell" => "shu", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/shu.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/XVIrxwF.png", 
+            "image_compare" => ""})
         Alphabet.create ({"japanese" => "ショ", "spell" => "sho", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/sho.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/k1FDVPy.png", 
+            "image_compare" => ""})
         
         Alphabet.create ({"japanese" => "チャ", "spell" => "cha", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/cha.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/XzlqUWr.png", 
+            "image_compare" => ""})
         Alphabet.create ({"japanese" => "チュ", "spell" => "chu", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/chu.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/s15zE6f.png", 
+            "image_compare" => ""})
         Alphabet.create ({"japanese" => "チョ", "spell" => "cho", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/cho.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/q3SKqE5.png", 
+            "image_compare" => ""})
         
         Alphabet.create ({"japanese" => "ニャ", "spell" => "nya", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/nya.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/GsAzBYO.png", 
+            "image_compare" => ""})
         Alphabet.create ({"japanese" => "ニュ", "spell" => "nyu", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/nyu.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/LzvS4Z2.png", 
+            "image_compare" => ""})
         Alphabet.create ({"japanese" => "ニョ", "spell" => "nyo", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/nyo.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/gBfk0Ej.png", 
+            "image_compare" => ""})
         
         Alphabet.create ({"japanese" => "ヒャ", "spell" => "hya", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/hya.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/DPvs8TK.png", 
+            "image_compare" => ""})
         Alphabet.create ({"japanese" => "ヒュ", "spell" => "hyu", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/hyu.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/LR97Zgp.png", 
+            "image_compare" => ""})
         Alphabet.create ({"japanese" => "ヒョ", "spell" => "hyo", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/hyo.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/CzMQIja.png", 
+            "image_compare" => ""})
         
         Alphabet.create ({"japanese" => "ミャ", "spell" => "mya", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/mya.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/AkFX915.png", 
+            "image_compare" => ""})
         Alphabet.create ({"japanese" => "ミュ", "spell" => "myu", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/myu.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/BCi9E8M.png", 
+            "image_compare" => ""})
         Alphabet.create ({"japanese" => "ミョ", "spell" => "myo", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/myo.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/r95hrUs.png", 
+            "image_compare" => ""})
         
         Alphabet.create ({"japanese" => "リャ", "spell" => "rya", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/rya.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/ZUmOjYw.png", 
+            "image_compare" => ""})
         Alphabet.create ({"japanese" => "リュ", "spell" => "ryu", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/ryu.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/NuI5qNE.png", 
+            "image_compare" => ""})
         Alphabet.create ({"japanese" => "リョ", "spell" => "ryo", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/ryo.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/fuLx91i.png", 
+            "image_compare" => ""})
         
         Alphabet.create ({"japanese" => "ギャ", "spell" => "gya", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/gya.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/XQmTvU9.png", 
+            "image_compare" => ""})
         Alphabet.create ({"japanese" => "ギュ", "spell" => "gyu", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/gyu.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/Am57uJF.png", 
+            "image_compare" => ""})
         Alphabet.create ({"japanese" => "ギョ", "spell" => "gyo", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/gyo.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/lgjnya3.png", 
+            "image_compare" => ""})
         
         Alphabet.create ({"japanese" => "ジャ", "spell" => "ja", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/ja.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/wweqSID.png", 
+            "image_compare" => ""})
         Alphabet.create ({"japanese" => "ジュ", "spell" => "ju", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/ju.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/IeP3CeA.png", 
+            "image_compare" => ""})
         Alphabet.create ({"japanese" => "ジョ", "spell" => "jo", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/jo.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/wR98T2F.png", 
+            "image_compare" => ""})
         
         Alphabet.create ({"japanese" => "ビャ", "spell" => "bya", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/bya.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/ZV747wn.png", 
+            "image_compare" => ""})
         Alphabet.create ({"japanese" => "ビュ", "spell" => "byu", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/byu.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/d3SnADf.png", 
+            "image_compare" => ""})
         Alphabet.create ({"japanese" => "ビョ", "spell" => "byo", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/byo.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/4YBz57j.png", 
+            "image_compare" => ""})
     
         Alphabet.create ({"japanese" => "ピャ", "spell" => "pya", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/pya.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/7WMkTVD.png", 
+            "image_compare" => ""})
         Alphabet.create ({"japanese" => "ピュ", "spell" => "pyu", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/pyu.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/E3j285x.png", 
+            "image_compare" => ""})
         Alphabet.create ({"japanese" => "ピョ", "spell" => "pyo", "classify" => 3,
             "sound" => "https://www.nhk.or.jp/lesson/mp3/syllabary/pyo.mp3",
-            "image_writing" => ".png", 
-            "image_compare" => ".png"})
+            "image_writing" => "https://imgur.com/69stT8r.png", 
+            "image_compare" => ""})
     end
 end

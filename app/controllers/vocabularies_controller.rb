@@ -1,7 +1,11 @@
 class VocabulariesController < ApplicationController
-    before_action :find_lesson, only: [:index, :create, :destroy]
+    before_action :find_lesson, only: [:index, :create, :destroy, :edit, :show, :update]
     
     def index
+    end
+    
+    def show
+        @vocabulary = @lesson.vocabularies.find_by id: params[:id]
     end
     
     def create
@@ -13,6 +17,18 @@ class VocabulariesController < ApplicationController
             redirect_to lesson_vocabularies_path
         end
                                
+    end
+    
+    def edit
+        @vocabulary = @lesson.vocabularies.find_by id: params[:id]
+    end
+    
+    def update
+        @vocabulary = @lesson.vocabularies.find_by id: params[:id]
+        @vocabulary.update_attributes(new_params)
+        if @vocabulary.save
+            redirect_to lesson_vocabularies_path
+        end
     end
     
     def destroy

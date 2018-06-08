@@ -23,14 +23,6 @@ ActiveRecord::Schema.define(version: 20180529084818) do
     t.datetime "updated_at",        null: false
   end
 
-  create_table "alphabet_writings", force: :cascade do |t|
-    t.integer  "alphabet_id"
-    t.string   "image_writing"
-    t.string   "image_compare"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
   create_table "alphabets", force: :cascade do |t|
     t.string   "japanese"
     t.string   "spell"

@@ -5,13 +5,20 @@ class Api::SessionsController < ApplicationController
     before_action :authenticate_user!, only: :destroy
     
     def create
-        if @user.valid_password?(user_params[:password])
-            @error = false
-            @message = "Login successfully"
-            sign_in @user
-        else
+        user_check = User.find_by email: user_params[:email]
+        if user_check.nil?
             @error = true
             @message = "This email already exist, please login"
+        else
+
+            if @user.valid_password?(user_params[:password])
+                @error = false
+                @message = "Login successfully"
+                sign_in @user
+            else
+                @error = true
+                @message = "This email already exist, please login"
+            end
         end
     end
     

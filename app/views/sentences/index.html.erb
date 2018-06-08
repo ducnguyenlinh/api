@@ -1,7 +1,23 @@
 <h2><%= @vocabulary.japanese %></h2>
 <hr>
 <a href="<%= new_lesson_vocabulary_sentence_path%>" class="btn btn-primary">Add Sentence</a>
+<a href="<%= edit_lesson_vocabulary_path(@lesson, @vocabulary)%>" class="btn btn-primary">Edit Vocabulary</a>
 <%= link_to("Delete Vocabulary", lesson_vocabulary_path(@lesson, @vocabulary), method: :delete) %>
+<hr>
+<h3>Japanese / Spell</h3>
+<div class="list-group">
+    <%= @vocabulary.japanese %>
+    <%= @vocabulary.spell %>
+</div>
+<h3>Mean</h3>
+<div class="list-group">
+    <%= @vocabulary.mean %>
+</div>
+<hr>
+<h3>Picture</h3>
+<div class="list-group">
+    <img src="<%= @vocabulary.picture %>" class="img-responsive">
+</div>
 <hr>
 <h3>Sentence</h3>
 <div class="list-group">

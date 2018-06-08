@@ -1,0 +1,26 @@
+<h2> Edit Vocabulary </h2>
+<%= form_for([@lesson, @vocabulary]) do |f|%>
+    
+    <div class="field">
+        <%= f.label :japanese %>
+        <%= f.text_field :japanese, class: "form-control" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :spell %>
+        <%= f.text_field :spell, class: "form-control" %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :mean %>
+        <%= f.text_field :mean, class: "form-control" %>
+    </div>
+    <div class="field">
+        <%= f.label :picture %>
+        <%= f.text_field :picture, class: "form-control" %>
+    </div>
+    <br>
+    <div class="actions">
+        <%= f.submit "Save changes", class: "btn btn-primary" %>
+    </div>
+<% end %>
